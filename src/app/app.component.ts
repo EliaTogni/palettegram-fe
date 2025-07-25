@@ -34,7 +34,7 @@ export class AppComponent {
     const formData = new FormData();
     formData.append('file', this.originalFile);
 
-    this.http.post('http://localhost:8080/image/upload', formData, { responseType: 'blob' })
+    this.http.post('https://palettegram.onrender.com/image/upload', formData, { responseType: 'blob' })
         .subscribe(blob => {
           this.transformedBlob = blob;
           const reader = new FileReader();
